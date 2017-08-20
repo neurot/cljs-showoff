@@ -14,7 +14,7 @@
 
 (defn about-panel []
   (fn []
-    [:div "This is the About Page."
+    [:h1.mb3 "This is the About Page."
      [:div [:a {:href "#/"} "go to Home Page"]]]))
 
 ;; main
