@@ -3,4 +3,5 @@ index.html
 js/compiled/app.js
 css/screen.css
 css/ace.min.css
-https://fonts.googleapis.com/css?family=Archivo+Black|Archivo
+fonts/CrimsonText.woff2
+fonts/Monofett.woff2
