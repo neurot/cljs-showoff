@@ -2,6 +2,7 @@ body {
   color: black;
   font-family: 'Crimson Text';
   font-size: 1.2em;
+  text-align: center;
   line-height: 1.6;
 }
 
@@ -10,8 +11,8 @@ a {
 }
 
 h1 {
-  font-family: 'Montserrat Subrayada';
-  font-size: 2em;
+  font-family: 'Encode Sans';
+  font-size: 3em;
 }
 
 h2 {

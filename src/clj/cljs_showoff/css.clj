@@ -5,10 +5,12 @@
   [:body {:color "black"
           :font-family "'Crimson Text'"
           :font-size "1.2em"
+          :text-align "center"
           :line-height "1.6"}]
   [:a {:color "#1565c0"}]
-  [:h1 {:font-family "'Montserrat Subrayada'"
-        :font-size "2em"
+  [:h1 {:font-family "'Encode Sans'"
+        :font-size "3em"
+        ;; :text-align "center"
         ;; :color "#FF3692"
         }]
   [:h2 {:font-family "'Montserrat Subrayada'"}]

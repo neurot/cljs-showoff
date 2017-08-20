@@ -7,7 +7,7 @@
   (let [name (re-frame/subscribe [:name])]
     (fn []
       [:div
-       [:h1 (str "Hello from " @name ". This is the Home Page.")]
+       [:h1.mb3 (str "Hello from " @name ". This is the Home Page.")]
        [:div [:a {:href "#/about"} "go to About Page"]]])))
 
 ;; about
