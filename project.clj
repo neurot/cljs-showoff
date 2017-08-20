@@ -5,10 +5,10 @@
                  [re-frame "0.10.1"]
                  [secretary "1.2.3"]
                  [garden "1.3.2"]
-                 [ns-tracker "0.3.0"]
-                 [compojure "1.5.0"]
-                 [yogthos/config "0.8"]
-                 [ring "1.4.0"]]
+                 [ns-tracker "0.3.1"]
+                 [compojure "1.6.0"]
+                 [yogthos/config "0.9"]
+                 [ring "1.6.2"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-garden "0.2.8"]]
@@ -39,8 +39,8 @@
                    [com.cemerick/piggieback "0.2.2"]]
 
     :plugins      [[lein-figwheel "0.5.13"]
-                   [lein-doo "0.1.7"]]
-    }}
+                   [lein-doo "0.1.7"]]}}
+
 
   :cljsbuild
   {:builds
@@ -53,8 +53,8 @@
                     :asset-path           "js/compiled/out"
                     :source-map-timestamp true
                     :preloads             [devtools.preload]
-                    :external-config      {:devtools/config {:features-to-install :all}}
-                    }}
+                    :external-config      {:devtools/config {:features-to-install :all}}}}
+
 
     {:id           "min"
      :source-paths ["src/cljs"]
@@ -70,8 +70,8 @@
      :compiler     {:main          cljs-showoff.runner
                     :output-to     "resources/public/js/compiled/test.js"
                     :output-dir    "resources/public/js/compiled/test/out"
-                    :optimizations :none}}
-    ]}
+                    :optimizations :none}}]}
+
 
   :main cljs-showoff.server
 
@@ -79,5 +79,4 @@
 
   :uberjar-name "cljs-showoff.jar"
 
-  :prep-tasks [["cljsbuild" "once" "min"]["garden" "once"] "compile"]
-  )
+  :prep-tasks [["cljsbuild" "once" "min"]["garden" "once"] "compile"])

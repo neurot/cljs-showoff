@@ -11,7 +11,7 @@
 (defn dev-setup []
   (when config/debug?
     (enable-console-print!)
-    (println "dev mode")))
+        (println "dev mode")))
 
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
