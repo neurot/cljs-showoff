@@ -1,6 +1,7 @@
 (defproject cljs-showoff "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.908"]
+                 [lein-asset-minifier "0.4.3"]
                  [reagent "0.7.0"]
                  [re-frame "0.10.1"]
                  [secretary "1.2.3"]
@@ -19,7 +20,7 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
                                     "test/js"
-                                    "resources/public/css"]
+                                    "resources/public/css/screen.css"]
 
   :figwheel {:css-dirs ["resources/public/css"]
              :ring-handler cljs-showoff.handler/dev-handler}
@@ -31,6 +32,11 @@
                                     :pretty-print? true}}]}
 
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+
+  :minify-assets [;; [:html {:source "dev/resource/html" :target "dev/minified/html"}]
+                  [:css {:source "resources/public/css/ace.css" :target "resources/public/css/ace.min.css"}]
+                  ;; [:js {:source ["dev/res/js1", "dev/res/js2"] :target "dev/minified/js/script.min.js"}]
+                  ]
 
   :profiles
   {:dev
